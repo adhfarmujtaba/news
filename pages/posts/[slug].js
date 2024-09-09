@@ -31,7 +31,7 @@ const Post = ({ post }) => {
       setTimeout(() => {
         setSkeletonVisible(false);
         setLoading(false);
-      }, 400); // Show skeleton for at least 1 second
+      }, 400); // Show skeleton for at least 0.4 seconds
     }
   }, [post]);
 
@@ -80,6 +80,8 @@ const Post = ({ post }) => {
         <meta property="og:image" content={post.image} />
         <meta property="og:url" content={`https://yourwebsite.com/posts/${post.slug}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Your Website Name" /> {/* Add your site name */}
+        <meta property="og:locale" content="en_US" /> {/* Add your locale */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@yourtwitterhandle" />
         <meta name="twitter:title" content={post.title} />
