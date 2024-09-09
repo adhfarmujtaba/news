@@ -15,7 +15,7 @@ const Home = ({ initialPosts }) => {
       setTimeout(async () => {
         setPosts(initialPosts);
         setIsLoading(false);
-      }, 2000); // Simulate a 2-second delay
+      }, 400); // Simulate a 2-second delay
     };
 
     loadPosts();

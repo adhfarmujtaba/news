@@ -31,7 +31,7 @@ const Post = ({ post }) => {
       setTimeout(() => {
         setSkeletonVisible(false);
         setLoading(false);
-      }, 1000); // Show skeleton for at least 1 second
+      }, 400); // Show skeleton for at least 1 second
     }
   }, [post]);
 
@@ -41,7 +41,7 @@ const Post = ({ post }) => {
 
   if (loading && skeletonVisible) {
     return (
-      <div className="bg-[#f8f9fa] min-h-screen py-8">
+      <div className="bg-[#f8f9fa] min-h-screen py-0">
         <div className="container mx-auto px-0">
           <article className="bg-white rounded-lg shadow-lg overflow-hidden">
             <Skeleton height={256} />
